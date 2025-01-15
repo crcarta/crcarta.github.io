@@ -1,0 +1,42 @@
+
+.flex-container {
+    display: flex;
+}
+.sidebar {
+  position: fixed;
+  top: 108px;
+  left: -25px;
+  width: 205px;
+  height: 100vh; /* Full height of the viewport */
+  color: #fff;
+  padding-top: 20px;
+  padding-left: 10px;
+  border-right: 1px solid #c7c7c2;
+  font-weight:bold;
+  padding: 20px;
+}
+
+
+li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.gap{
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    gap: 20px; /* Space between elements */
+}
+
+a {
+  text-decoration: none; /* Remove the underline */
+  color: black; /* Optional: Remove the default link color (blue) */
+}
+a:hover {
+  color:#adadad;
+  transition-delay: 0.05s;
+}
+
+.content{
+  flex: 1;
+  padding-left: 245px;
+}
