@@ -1,6 +1,29 @@
+html, body {
+  margin:0;
+  padding: 0;
+}
 
 .flex-container {
     display: flex;
+}
+.bar2{
+  position:absolute;
+  left:45%;
+  top:5%;
+}
+.rightbar{
+  position:fixed;
+  right:20px;
+}
+.topbar{
+  box-sizing: border-box;
+  left: -25px;
+  margin:0;
+  width: 100%;
+  height:100px;
+  background-color:#123C1C;
+  color:#000000
+  z-index:2;
 }
 .sidebar {
   position: fixed;
@@ -14,6 +37,7 @@
   border-right: 1px solid #c7c7c2;
   font-weight:bold;
   padding: 20px;
+  z-index:1;
 }
 
 
@@ -38,5 +62,55 @@ a:hover {
 
 .content{
   flex: 1;
-  padding-left: 245px;
+  padding-left: 12%;
+}
+
+.container{
+  display:flex;
+  width: 60%;
+  height: 50vh;
+}
+.about-imagebox img{
+      max-width:100%;
+      height:auto;
+    }
+.about-textbox{
+  text-align:left;
+  font-size:18px;
+}
+
+.about-textbox, .about-imagebox {
+  flex:1;
+  display:flex;
+  box-sizing:border-box;
+}
+.about-imagebox{
+  padding:15px;
+  transition:transform 0.2s;
+}
+.overlay{
+  width:11.5%;;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  pointer-events:none;
+}
+
+.nodots{
+  list-style-type:none;
+  font-size: 1.5rem;
+}
+.body{
+  font-family: 'Noto Sans';
+}
+.namebox{
+  padding:10px;
+  font-size:24px;
+  width:200px;
+  z-index:3;
+  margin-top:-5vh;
+  position:absolute;
+}
+.vertline{
+  border-top:2px solid black;
+  margin-top:20vh;
 }
