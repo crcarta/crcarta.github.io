@@ -2,15 +2,16 @@ html, body {
   margin:0;
   padding: 0;
 }
-
+.body{
+  font-family: 'Noto Sans';
+}
 .flex-container {
     display: flex;
 }
-.bar2{
-  position:absolute;
-  left:45%;
-  top:5%;
-}
+
+
+
+
 .rightbar{
   position:fixed;
   right:20px;
@@ -95,22 +96,24 @@ a:hover {
   pointer-events:none;
 }
 
-.nodots{
-  list-style-type:none;
-  font-size: 1.5rem;
-}
-.body{
-  font-family: 'Noto Sans';
+/* index */
+.vertline{
+  border-top:2px solid black;
+  margin-top:210px;
 }
 .namebox{
   padding:10px;
   font-size:24px;
   width:200px;
   z-index:3;
-  margin-top:-5vh;
+  margin-top:-50px;
   position:absolute;
 }
-.vertline{
-  border-top:2px solid black;
-  margin-top:20vh;
+.nodots{
+  list-style-type:none;
+  font-size: 1.5rem;
 }
+.bar2{
+  position:absolute;
+  left:45%;
+  top:5%;
