@@ -1,0 +1,135 @@
+/* Resume.css (Fixed: Larger logos, left-justified roles, close to logos) */
+.professional-roles {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f8fafc; /* Slate-50 for clean background */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 48rem; /* 768px, fits most screens */
+  width: 100%;
+}
+
+.container h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e293b; /* Slate-800 */
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.025em;
+}
+.container h2{
+  color:#1e293b;
+}
+.container h3{
+  color:#1e293b;
+}
+
+.roles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between entries */
+}
+.section-header {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  text-align: left;
+  border-bottom: 1px solid #cbd5e1; /* Optional: visual separation */
+  padding-bottom: 0.25rem;
+}
+
+.role-entry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 0.75rem 0.75rem 0;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.role-entry:hover .role-logo {
+  opacity: 0.9; /* Hover effect on logo */
+}
+
+.role-logo {
+  width: 100px !important;
+  height: 100px !important; /* Force square aspect ratio */
+  object-fit: cover;       /* Ensures the image fills the circle */
+  border-radius: 55%;      /* Makes it circular */
+  flex-shrink: 0;
+  transition: opacity 0.2s ease;
+  border: 2px solid rgb(0, 0, 0); /* Optional: remove after debugging */
+}
+
+
+.role-title {
+  flex: 1;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  min-width: 0; /* For flex wrapping */
+}
+.role-date {
+  font-size: 0.95rem;
+  color: #6b7280; /* Slate-500 */
+  white-space: nowrap;
+  margin-left: auto; /* Pushes it to the far right */
+}
+
+.role-logo--gbox {
+  width: 100px !important;
+  height: 100px !important;
+  object-fit: contain;
+  border: 2px solid black;
+  border-radius: 0; /* <-- No rounding, square edges */
+  background-color: white; /* Optional for visibility */
+}
+
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .container h1 {
+    font-size: 1.875rem;
+  }
+
+  .role-entry {
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    gap: 0.2rem; /* Very close for mobile */
+  }
+
+  .role-logo {
+    width: 56px !important; /* Larger for mobile */
+    height: auto !important;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 1px solid rgb(17, 3, 3); /* Debug: Remove after confirming */
+  }
+
+  .role-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .role-title {
+    text-align: left;
+    width: 100%;
+  }
+}

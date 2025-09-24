@@ -1,0 +1,80 @@
+.navbar {
+    position: static;
+    width: 100vw; /* Full viewport width */
+    background-color: #fafafa;
+    color: #4B4B4B;
+    padding: 1rem 0;
+    font-family: Arial, sans-serif;
+    margin: 0; /* Remove any margin */
+  }
+  
+  .navbar-container {
+    width: 100vw; /* Full viewport width */
+    margin: 0;
+    padding: 0 1rem; /* Consistent padding */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  
+  .navbar-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0 0 0 1rem;
+    padding: 0;
+    gap: 1rem;
+  }
+  
+  .navbar-item a {
+    color: #4B4B4B;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .navbar-item a:hover {
+    color: #7D7D7D;
+  }
+  
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar-menu {
+      position: absolute;
+      left: -100%;
+      top: 60px;
+      flex-direction: column;
+      background-color: #1a1a1a;
+      width: 100vw; /* Full viewport width */
+      text-align: center;
+      transition: 0.3s;
+      padding: 2rem 0;
+      margin: 0;
+    }
+  
+    .navbar-menu.active {
+      left: 0;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+  }

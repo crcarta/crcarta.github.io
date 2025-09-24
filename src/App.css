@@ -1,0 +1,81 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.socials {
+  font-size: 2rem;
+}
+
+.socials a:hover{
+  color: #0077b5;
+}
+body {
+  background-color: #fafafa; /* Off-white for entire site */
+  margin: 0;
+}
+
+.homepage {
+  min-height: 100vh;
+  background-color: #fafafa; /* Match body */
+  color: #333;
+  width: 100%;
+}
+
+.self {
+  width: 38%;  /* This ensures the image takes up the full width of the container */
+  height: auto; /* Keeps the aspect ratio intact */
+  max-width: 100%;
+  max-height: 100%;  /* Ensures the image doesn't exceed the height of its container */
+}
+.socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fafafa; /* Dark footer for contrast */
+  color:black;
+}
