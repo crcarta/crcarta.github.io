@@ -12,6 +12,7 @@ function App() {
 
   const Home = () => (
     <div className="homepage" style={{ paddingTop: '80px' }}>
+      <title>Christiano Carta</title>
       <img src={self} alt="Self" className="self" />
       <h1>Christiano Carta</h1>
       <p className="bio">
