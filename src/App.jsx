@@ -22,7 +22,7 @@ function App() {
         <a href="https://github.com/crcarta" target="_blank" rel="noreferrer">
           <FaGithub />
         </a>
-        <a href="https://linkedin.com/in/christianocarta" target="_blank" rel="noreferrer">
+        <a href="www.linkedin.com/in/christiano-carta" target="_blank" rel="noreferrer">
           <FaLinkedin />
         </a>
       </div>
