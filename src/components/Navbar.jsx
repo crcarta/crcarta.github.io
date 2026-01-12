@@ -27,6 +27,11 @@ const Navbar = () => {
               Resume
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/portfolio" className="navbar-link" onClick={() => setIsOpen(false)}>
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

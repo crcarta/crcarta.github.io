@@ -1,0 +1,30 @@
+.github-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 320px; /* slightly wider to give more space for dot */
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: #f9f9f9;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* title still centered */
+  gap: 0.75rem;           /* space between title and dot */
+}
+
+.status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Status colors */
+.status-dot.in-progress { background-color: orange; }
+.status-dot.development { background-color: red; }
+.status-dot.completed   { background-color: green; }

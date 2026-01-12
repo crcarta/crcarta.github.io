@@ -17,7 +17,7 @@ const Resume = () => {
         <div className="roles-list">
           <div className="role-entry">
             <img src={hubbell} alt="Hubbell Incorporated Logo" className="role-logo" />
-            <span className="role-title">Associate Embedded Software Engineer</span>
+            <span className="role-title">Embedded Software Engineer</span>
             <span className="role-date">09/2024 – 05/2025</span>
           </div>
           <div className="role-entry">

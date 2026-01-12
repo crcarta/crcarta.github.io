@@ -4,9 +4,9 @@ import self from './assets/Self.jpg';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Resume from './components/Resume';
+import Resume from './pages/Resume';
 import './App.css';
-
+import Portfolio from './pages/Portfolio';
 function App() {
   const [count, setCount] = useState(0);
 
@@ -39,6 +39,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />
+        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </Router>
   );
