@@ -24,12 +24,19 @@ const Portfolio = () => {
               status="in-progress"
             />
             <GitHubCard
+              title="Computer Chess"
+              description="Working on a functional, basic chess AI."
+              repoURL="https://github.com/crcarta/computer-chess"
+              status="in-progress"
+            />
+            <GitHubCard
               title="Data Science - Books"
               description="Statistical analysis of a book dataset using Python."
               repoUrl="https://github.com/crcarta/book_data_python"
               status="completed"
             />
           </div>
+
 
           <div className="status-key-side">
             <div className="status-key-box">
