@@ -48,10 +48,6 @@
   display: inline-block;
 }
 
-/* Status colors */
-.status-dot.in-progress { background-color: orange; }
-.status-dot.completed   { background-color: green; }
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .portfolio-grid-wrapper {

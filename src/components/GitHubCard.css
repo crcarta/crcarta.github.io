@@ -2,7 +2,7 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 1rem;
-  width: 320px; /* slightly wider to give more space for dot */
+  width: 320px;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -14,8 +14,8 @@
 .card-header {
   display: flex;
   align-items: center;
-  justify-content: center; /* title still centered */
-  gap: 0.75rem;           /* space between title and dot */
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .status-dot {
@@ -25,6 +25,5 @@
   display: inline-block;
 }
 
-/* Status colors */
 .status-dot.in-progress { background-color: #22C55E; }
-.status-dot.completed   { background-color: #64748B; }
+.status-dot.completed   { background-color: #2B3442; }
