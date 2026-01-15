@@ -30,6 +30,12 @@ const Portfolio = () => {
               status="in-progress"
             />
             <GitHubCard
+              title="Python Solutions"
+              description="Solutions to coding problems in the Python programing language."
+              repoURL="https://github.com/crcarta/PythonSolutions"
+              status="in-progress"
+            />
+            <GitHubCard
               title="Data Science - Books"
               description="Statistical analysis of a book dataset using Python."
               repoUrl="https://github.com/crcarta/book_data_python"
@@ -41,10 +47,10 @@ const Portfolio = () => {
           <div className="status-key-side">
             <div className="status-key-box">
               <div className="status-item">
-                <span className="status-dot in-progress"></span> In Progress
+                <span className="status-dot in-progress"></span> Active
               </div>
               <div className="status-item">
-                <span className="status-dot completed"></span> Completed
+                <span className="status-dot completed"></span> Archived
               </div>
             </div>
           </div>

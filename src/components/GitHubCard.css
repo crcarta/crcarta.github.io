@@ -26,6 +26,5 @@
 }
 
 /* Status colors */
-.status-dot.in-progress { background-color: orange; }
-.status-dot.development { background-color: red; }
-.status-dot.completed   { background-color: green; }
+.status-dot.in-progress { background-color: #22C55E; }
+.status-dot.completed   { background-color: #64748B; }
