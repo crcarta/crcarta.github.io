@@ -47,7 +47,6 @@
   border-radius: 50%;
   display: inline-block;
 }
-
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .portfolio-grid-wrapper {

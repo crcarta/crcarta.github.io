@@ -25,19 +25,19 @@ const Portfolio = () => {
             />
             <GitHubCard
               title="Computer Chess"
-              description="Working on a functional, basic chess AI."
-              repoURL="https://github.com/crcarta/computer-chess"
+              description="C | Working on a functional, basic chess AI."
+              repoUrl="https://github.com/crcarta/computer-chess"
               status="in-progress"
             />
             <GitHubCard
               title="Python Solutions"
-              description="Solutions to coding problems in the Python programing language."
-              repoURL="https://github.com/crcarta/PythonSolutions"
+              description="Python | Solutions to coding problems."
+              repoUrl="https://github.com/crcarta/PythonSolutions"
               status="in-progress"
             />
             <GitHubCard
               title="Data Science - Books"
-              description="Statistical analysis of a book dataset using Python."
+              description="Python | Statistical analysis of a book dataset using Jupyter."
               repoUrl="https://github.com/crcarta/book_data_python"
               status="completed"
             />
