@@ -1,3 +1,4 @@
+/* --- Global Styles --- */
 .professional-roles {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background-color: #f8fafc;
@@ -5,26 +6,27 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 3rem 1.5rem; /* Increased padding */
+  padding: 3rem 1.5rem;
 }
 
 .container {
-  max-width: 52rem; /* Slightly wider for the larger text */
+  max-width: 52rem;
   width: 100%;
 }
 
+/* --- Header Section --- */
 .container h1 {
-  font-size: 3rem; /* Larger Name */
+  font-size: 3rem;
   font-weight: 800;
   color: #1e293b;
-  text-align: left; /* Left justified */
+  text-align: left;
   margin-bottom: 0.25rem;
   letter-spacing: -0.025em;
 }
 
 .container > h2:not(.section-header) {
-  text-align: left; /* Left justified */
-  font-size: 1.5rem; /* Larger Subtitle */
+  text-align: left;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #64748b;
   margin-bottom: 3rem;
@@ -33,7 +35,7 @@
 .section-header {
   margin-top: 2.5rem;
   margin-bottom: 2rem;
-  font-size: 1.75rem; /* Larger Section Headers */
+  font-size: 1.75rem;
   font-weight: 700;
   color: #1e293b;
   text-align: left;
@@ -41,55 +43,52 @@
   padding-bottom: 0.5rem;
 }
 
+/* --- Grid List Layout --- */
 .roles-list {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem; /* More breathing room between jobs */
+  gap: 2.5rem;
 }
 
 .role-entry {
   display: grid;
-  /* Larger logo column */
+  /* Fixed 100px first column ensures all text in the 2nd column lines up */
   grid-template-columns: 100px 1fr auto;
   align-items: center;
   gap: 2rem;
+  width: 100%;
 }
 
-/* Updated Logo Logic */
+/* --- Logos --- */
 .role-logo, .role-logo--gbox {
   width: 100px;
   height: 100px;
-  /* 'cover' crops the whitespace while 'contain' shows the whole thing */
-  object-fit: cover;
+  object-fit: contain; /* Changed to contain to prevent cropping logos */
   background-color: white;
   border: 1px solid #e2e8f0;
-  border-radius: 12px; /* Rounded square looks cleaner for logos */
+  border-radius: 12px;
   flex-shrink: 0;
-}
-
-/* Specific fix for Hubbell if cover crops too much:
-   use 'contain' with a bit of internal padding */
-.role-logo {
-  padding: 4px;
+  padding: 8px; /* Internal padding for logos */
   box-sizing: border-box;
 }
 
+/* --- Text Content --- */
 .role-title {
-  font-size: 1.35rem; /* Larger Job Titles */
+  font-size: 1.35rem;
   font-weight: 600;
   color: #1e293b;
   line-height: 1.2;
+  text-align: left; /* Explicitly left aligned */
 }
 
 .role-date {
-  font-size: 1.1rem; /* Larger Dates */
+  font-size: 1.1rem;
   color: #6b7280;
   white-space: nowrap;
   text-align: right;
 }
 
 /* --- Mobile Responsiveness --- */
-
 @media (max-width: 768px) {
   .container h1 {
     font-size: 2.5rem;
@@ -108,7 +107,7 @@
   .role-date {
     grid-column: 2;
     text-align: left;
-    margin-top: -0.75rem;
+    margin-top: -0.5rem;
     font-size: 1rem;
   }
 
