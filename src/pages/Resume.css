@@ -5,128 +5,114 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem; /* Increased padding */
 }
 
 .container {
-  max-width: 48rem;
+  max-width: 52rem; /* Slightly wider for the larger text */
   width: 100%;
 }
 
 .container h1 {
-  font-size: 2.25rem;
-  font-weight: 700;
+  font-size: 3rem; /* Larger Name */
+  font-weight: 800;
   color: #1e293b;
-  text-align: center;
-  margin-bottom: 2.5rem;
+  text-align: left; /* Left justified */
+  margin-bottom: 0.25rem;
   letter-spacing: -0.025em;
 }
-.container h2{
-  color:#1e293b;
+
+.container > h2:not(.section-header) {
+  text-align: left; /* Left justified */
+  font-size: 1.5rem; /* Larger Subtitle */
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 3rem;
 }
-.container h3{
-  color:#1e293b;
+
+.section-header {
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.75rem; /* Larger Section Headers */
+  font-weight: 700;
+  color: #1e293b;
+  text-align: left;
+  border-bottom: 2px solid #cbd5e1;
+  padding-bottom: 0.5rem;
 }
 
 .roles-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-.section-header {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1e293b;
-  text-align: left;
-  border-bottom: 1px solid #cbd5e1;
+  gap: 2.5rem; /* More breathing room between jobs */
 }
 
 .role-entry {
-  display: flex;
+  display: grid;
+  /* Larger logo column */
+  grid-template-columns: 100px 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.75rem 0.75rem 0.75rem 0;
-  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.role-entry:hover .role-logo {
-  opacity: 0.9;
-}
-.role-logo {
-  width: 100px !important;
-  height: 100px !important;
+/* Updated Logo Logic */
+.role-logo, .role-logo--gbox {
+  width: 100px;
+  height: 100px;
+  /* 'cover' crops the whitespace while 'contain' shows the whole thing */
   object-fit: cover;
-  border-radius: 55%;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px; /* Rounded square looks cleaner for logos */
   flex-shrink: 0;
-  transition: opacity 0.2s ease;
-  border: 2px solid rgb(0, 0, 0); /* Optional: remove after debugging */
 }
 
+/* Specific fix for Hubbell if cover crops too much:
+   use 'contain' with a bit of internal padding */
+.role-logo {
+  padding: 4px;
+  box-sizing: border-box;
+}
 
 .role-title {
-  flex: 1;
-  text-align: left;
-  font-size: 1.125rem;
+  font-size: 1.35rem; /* Larger Job Titles */
   font-weight: 600;
   color: #1e293b;
-  min-width: 0; /* For flex wrapping */
+  line-height: 1.2;
 }
+
 .role-date {
-  font-size: 0.95rem;
-  color: #6b7280; /* Slate-500 */
+  font-size: 1.1rem; /* Larger Dates */
+  color: #6b7280;
   white-space: nowrap;
-  margin-left: auto; /* Pushes it to the far right */
+  text-align: right;
 }
 
-.role-logo--gbox {
-  width: 100px !important;
-  height: 100px !important;
-  object-fit: contain;
-  border: 2px solid black;
-  border-radius: 0; /* <-- No rounding, square edges */
-  background-color: white; /* Optional for visibility */
-}
+/* --- Mobile Responsiveness --- */
 
-
-@media (max-width: 640px) {
-  .container {
-    padding: 0 1rem;
-  }
-
+@media (max-width: 768px) {
   .container h1 {
-    font-size: 1.875rem;
+    font-size: 2.5rem;
   }
 
   .role-entry {
-    padding: 0.5rem 0.5rem 0.5rem 0;
-    gap: 0.2rem; /* Very close for mobile */
+    grid-template-columns: 80px 1fr;
+    gap: 1.25rem;
   }
 
-  .role-logo {
-    width: 56px !important; /* Larger for mobile */
-    height: auto !important;
-    object-fit: contain;
-    border-radius: 8px;
-    border: 1px solid rgb(17, 3, 3); /* Debug: Remove after confirming */
+  .role-logo, .role-logo--gbox {
+    width: 80px;
+    height: 80px;
   }
 
-  .role-title {
+  .role-date {
+    grid-column: 2;
+    text-align: left;
+    margin-top: -0.75rem;
     font-size: 1rem;
   }
-}
-
-@media (max-width: 480px) {
-  .role-entry {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
 
   .role-title {
-    text-align: left;
-    width: 100%;
+    font-size: 1.15rem;
   }
 }

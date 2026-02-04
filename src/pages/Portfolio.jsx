@@ -12,8 +12,20 @@ const Portfolio = () => {
         <div className="portfolio-grid-wrapper">
           <div className="projects-grid">
             <GitHubCard
+              title="mp Music Player"
+              description="C++ | Lightweight Music Player for Linux."
+              repoUrl="https://github.com/crcarta/mp"
+              status="in-progress"
+            />
+            <GitHubCard
+              title="Bootloader"
+              description="C | Simple Bootloader for ST NUCLEOF446RE board."
+              repoUrl="https://github.com/crcarta/stbootloader"
+              status="in-progress"
+            />
+            <GitHubCard
               title="Poker"
-              description={`C++ | Developing on ideas surrounding Texas Hold 'Em`}
+              description="C++ | Developing on ideas surrounding Texas Hold 'Em"
               repoUrl="https://github.com/crcarta/poker"
               status="in-progress"
             />
