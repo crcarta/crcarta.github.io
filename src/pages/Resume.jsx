@@ -1,6 +1,6 @@
 import React from 'react';
 import hubbell from '../assets/hubbell.png'
-import ccsu from '../assets/ccsu.jpg';
+import ccsu from '../assets/ccsu.png';
 import gbox from '../assets/gbox.jpg'
 const images = { hubbell, ccsu, gbox };
 import './Resume.css';
