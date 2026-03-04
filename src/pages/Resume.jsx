@@ -11,12 +11,14 @@ const Resume = () => {
   useEffect(() => {
     const entries = document.querySelectorAll('.role-entry');
 
+    // Reset visibility so animation restarts
+    entries.forEach((el) => el.classList.remove('role-entry--visible'));
+
     const observer = new IntersectionObserver(
       (items) => {
         items.forEach((item) => {
           if (item.isIntersecting) {
             item.target.classList.add('role-entry--visible');
-            // Once visible, we don't need to observe it again
             observer.unobserve(item.target);
           }
         });

@@ -81,12 +81,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Slightly boost visibility of the Georgia Tech logo only in dark mode, while keeping transparency */
-:root[data-theme='dark'] .role-logo--gt {
-  filter: drop-shadow(0 0 1.5px rgba(248, 250, 252, 0.8));
-}
-
 /* --- Text Content --- */
 .role-title {
   font-size: 1.35rem;

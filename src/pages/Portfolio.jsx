@@ -6,6 +6,9 @@ const Portfolio = () => {
   useEffect(() => {
     const cards = document.querySelectorAll('.portfolio-fade-item');
 
+    // Reset visibility so animation restarts
+    cards.forEach((el) => el.classList.remove('portfolio-fade-item--visible'));
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

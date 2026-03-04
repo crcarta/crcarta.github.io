@@ -70,8 +70,8 @@ function App() {
       <Navbar onToggleTheme={toggleTheme} theme={theme} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/resume" element={<Resume />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/resume" element={<Resume key={theme} />} />
+        <Route path="/portfolio" element={<Portfolio key={theme} />} />
       </Routes>
     </Router>
   );
