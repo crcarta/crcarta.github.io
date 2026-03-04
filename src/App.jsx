@@ -8,7 +8,15 @@ import Resume from './pages/Resume';
 import './App.css';
 import Portfolio from './pages/Portfolio';
 function App() {
-  const [count, setCount] = useState(0);
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((t) => (t === 'light' ? 'dark' : 'light'));
+  };
 
   const Home = () => {
     useEffect(() => {
@@ -50,8 +58,8 @@ function App() {
           </div>
         </div>
         <footer className="homepage-fade">
-          <p>© 2025 Christiano Carta. All Rights Reserved.</p>
-          <p>Last Modified 09/24/2025</p>
+          <p>© 2026 Christiano Carta. All Rights Reserved.</p>
+          <p>Last Modified 03/04/2026</p>
         </footer>
       </div>
     );
@@ -59,7 +67,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar onToggleTheme={toggleTheme} theme={theme} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/resume" element={<Resume />} />

@@ -3,8 +3,8 @@
     top: 10px;     /* move down slightly */
     left: 10px;    /* move slightly right */
     width: calc(100vw - 10px); /* adjust width so it doesn’t overflow */
-    background-color: #fafafa;
-    color: #4B4B4B;
+    background-color: var(--bg-body);
+    color: var(--text-main);
     padding: 1rem 0;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -17,6 +17,7 @@
     padding: 0 1rem; /* Consistent padding */
     display: flex;
     align-items: center;
+    justify-content: space-between;
     box-sizing: border-box;
   }
 
@@ -25,6 +26,11 @@
     font-weight: bold;
     color: #fff;
     text-decoration: none;
+  }
+
+  .navbar-left {
+    display: flex;
+    align-items: center;
   }
 
   .navbar-menu {
@@ -36,13 +42,13 @@
   }
 
   .navbar-item a {
-    color: #4B4B4B;
+    color: var(--text-main);
     text-decoration: none;
     transition: color 0.3s;
   }
 
   .navbar-item a:hover {
-    color: #7D7D7D;
+    color: var(--text-muted);
   }
 
   .navbar-toggle {
@@ -54,7 +60,7 @@
   .bar {
     width: 25px;
     height: 3px;
-    background-color: #fff;
+    background-color: var(--text-main);
     margin: 3px 0;
     transition: 0.3s;
   }
@@ -65,7 +71,7 @@
       left: -100%;
       top: 60px;
       flex-direction: column;
-      background-color: #1a1a1a;
+      background-color: var(--bg-body);
       width: 100vw; /* Full viewport width */
       text-align: center;
       transition: 0.3s;
@@ -80,4 +86,21 @@
     .navbar-toggle {
       display: flex;
     }
+  }
+
+  .theme-toggle-button {
+    border: 1px solid var(--border-subtle);
+    background-color: transparent;
+    color: var(--text-main);
+    border-radius: 999px;
+    padding: 0.3rem 0.4rem;  /* slightly taller, narrower */
+    font-size: 0.75rem;
+    margin-right: 100px; /* pull button ~100px away from right edge */
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .theme-toggle-button:hover {
+    background-color: var(--card-bg);
+    border-color: var(--border-subtle);
   }

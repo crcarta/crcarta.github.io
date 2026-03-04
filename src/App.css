@@ -1,3 +1,21 @@
+:root {
+  --bg-body: #fafafa;
+  --bg-page: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #6b7280;
+  --card-bg: #f0f0f0;
+  --border-subtle: #cbd5e1;
+}
+
+:root[data-theme='dark'] {
+  --bg-body: #111827;      /* soft charcoal */
+  --bg-page: #111827;      /* keep pages same color as body */
+  --text-main: #e5e7eb;    /* light gray text */
+  --text-muted: #9ca3af;   /* muted gray */
+  --card-bg: #1f2933;      /* slightly lighter cards/bubbles */
+  --border-subtle: #4b5563;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -49,14 +67,14 @@
   color: #0077b5;
 }
 body {
-  background-color: #fafafa; /* Off-white for entire site */
+  background-color: var(--bg-body); /* Themed background */
   margin: 0;
 }
 
 .homepage {
   min-height: 100vh;
-  background-color: #fafafa; /* Match body */
-  color: #333;
+  background-color: var(--bg-body); /* Match body */
+  color: var(--text-main);
   width: 100%;
 }
 
@@ -90,6 +108,6 @@ body {
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #fafafa; /* Dark footer for contrast */
-  color:black;
+  background-color: var(--bg-body);
+  color: var(--text-main);
 }

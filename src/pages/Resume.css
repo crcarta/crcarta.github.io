@@ -1,7 +1,7 @@
 /* --- Global Styles --- */
 .professional-roles {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f8fafc;
+  background-color: var(--bg-body);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@
 .container h1 {
   font-size: 3rem;
   font-weight: 800;
-  color: #1e293b;
+  color: var(--text-main);
   text-align: left;
   margin-bottom: 0.25rem;
   letter-spacing: -0.025em;
@@ -28,7 +28,7 @@
   text-align: left;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #64748b;
+  color: var(--text-muted);
   margin-bottom: 3rem;
 }
 
@@ -37,7 +37,7 @@
   margin-bottom: 2rem;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--text-main);
   text-align: left;
   border-bottom: 2px solid #cbd5e1;
   padding-bottom: 0.5rem;
@@ -81,18 +81,24 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Slightly boost visibility of the Georgia Tech logo only in dark mode, while keeping transparency */
+:root[data-theme='dark'] .role-logo--gt {
+  filter: drop-shadow(0 0 1.5px rgba(248, 250, 252, 0.8));
+}
+
 /* --- Text Content --- */
 .role-title {
   font-size: 1.35rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--text-main);
   line-height: 1.2;
   text-align: left; /* Explicitly left aligned */
 }
 
 .role-date {
   font-size: 1.1rem;
-  color: #6b7280;
+  color: var(--text-muted);
   white-space: nowrap;
   text-align: right;
 }

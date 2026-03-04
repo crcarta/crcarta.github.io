@@ -1,5 +1,5 @@
 .github-card {
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-subtle);
   border-radius: 10px;
   padding: 1rem;
   /* Removed fixed width and margin to prevent overlap */
@@ -8,8 +8,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  background-color: #f9f9f9;
-  color: #1e293b;
+  background-color: var(--card-bg);
+  color: var(--text-main);
   /* Ensures long descriptions don't break the card */
   word-wrap: break-word;
   height: 100%;
