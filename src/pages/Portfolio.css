@@ -30,6 +30,20 @@
   gap: 2rem;
 }
 
+/* Scroll reveal effect for portfolio content */
+.portfolio-fade-item {
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(6px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out, filter 500ms ease-out;
+}
+
+.portfolio-fade-item--visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns by default */
@@ -51,7 +65,7 @@
   gap: 0.75rem;
   background-color: #f0f0f0;
   padding: 0.75rem 1rem;
-  border-radius: 12px;
+  border-radius: 4px;
   font-size: 0.85rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }

@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import GitHubCard from '../components/GitHubCard';
 import './Portfolio.css';
 
 const Portfolio = () => {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.portfolio-fade-item');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('portfolio-fade-item--visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    cards.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="portfolio-wrapper"> {/* <- top-level flex container */}
       <div className="container">
@@ -10,7 +30,7 @@ const Portfolio = () => {
         <h2 className="section-header"></h2>
 
         <div className="portfolio-grid-wrapper">
-          <div className="projects-grid">
+          <div className="projects-grid portfolio-fade-item">
             <GitHubCard
               title="mp Music Player"
               description="C++ | Lightweight Music Player for Linux."
@@ -62,7 +82,7 @@ const Portfolio = () => {
           </div>
 
 
-          <div className="status-key-side">
+          <div className="status-key-side portfolio-fade-item">
             <div className="status-key-box">
               <div className="status-item">
                 <span className="status-dot in-progress"></span> Active

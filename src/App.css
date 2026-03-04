@@ -60,6 +60,20 @@ body {
   width: 100%;
 }
 
+/* Scroll reveal effect for home sections */
+.homepage-fade {
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(6px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out, filter 500ms ease-out;
+}
+
+.homepage-fade--visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
 .self {
   width: 35%;  /* This ensures the image takes up the full width of the container */
   height: auto; /* Keeps the aspect ratio intact */

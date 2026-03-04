@@ -52,26 +52,35 @@
 
 .role-entry {
   display: grid;
-  /* Fixed 100px first column ensures all text in the 2nd column lines up */
+  /* Fixed logo column preserves a strong vertical spine for titles */
   grid-template-columns: 100px 1fr auto;
   align-items: center;
   gap: 2rem;
   width: 100%;
+  opacity: 0;
+  transform: translateY(8px);
+  filter: blur(6px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out, filter 500ms ease-out;
 }
 
+/* When a role becomes visible on scroll */
+.role-entry--visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
 /* --- Logos --- */
 .role-logo, .role-logo--gbox {
-  width: 100px;
-  height: 100px;
-  object-fit: contain; /* Changed to contain to prevent cropping logos */
-  background-color: white;
-  border: 1px solid #e2e8f0;
-  border-radius: 12px;
+  width: 88px;   /* was 72px */
+  height: 64px;  /* was 56px */
+  object-fit: contain;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
   flex-shrink: 0;
-  padding: 8px; /* Internal padding for logos */
+  padding: 0;
   box-sizing: border-box;
 }
-
 /* --- Text Content --- */
 .role-title {
   font-size: 1.35rem;
@@ -100,8 +109,8 @@
   }
 
   .role-logo, .role-logo--gbox {
-    width: 80px;
-    height: 80px;
+    width: 72px;  /* slightly smaller on mobile */
+    height: 56px;
   }
 
   .role-date {

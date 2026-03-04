@@ -1,12 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import hubbell from '../assets/hubbell.png'
-import ccsu from '../assets/ccsu.png';
+import ccsu from '../assets/ccsu.png'
 import gbox from '../assets/gbox.jpg'
+import gt from '../assets/gt.png'
 const images = { hubbell, ccsu, gbox };
 import './Resume.css';
 
 
 const Resume = () => {
+  useEffect(() => {
+    const entries = document.querySelectorAll('.role-entry');
+
+    const observer = new IntersectionObserver(
+      (items) => {
+        items.forEach((item) => {
+          if (item.isIntersecting) {
+            item.target.classList.add('role-entry--visible');
+            // Once visible, we don't need to observe it again
+            observer.unobserve(item.target);
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+      }
+    );
+
+    entries.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="professional-roles">
       <div className="container">
@@ -34,6 +58,11 @@ const Resume = () => {
 
         <h2 className="section-header">Education</h2>
         <div className="roles-list">
+          <div className="role-entry">
+            <img src={gt} alt="Georgia Tech" className="role-logo" />
+            <span className="role-title">M.S. in Computer Science</span>
+            <span className="role-date">Incoming, Fall 2026</span>
+          </div>
           <div className="role-entry">
             <img src={ccsu} alt="Central Connecticut State University Logo" className="role-logo" />
             <span className="role-title">B.S. in Computer Science Honors</span>
