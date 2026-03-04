@@ -30,6 +30,12 @@ const Portfolio = () => {
               status="in-progress"
             />
             <GitHubCard
+              title="C++ Problems"
+              description="Solutions to coding problems."
+              repoUrl="https://github.com/crcarta/cpp_solutions"
+              status="in-progress"
+            />
+            <GitHubCard
               title="Personal Website"
               description="My React + Vite personal website."
               repoUrl="https://github.com/crcarta/crcarta.github.io"
