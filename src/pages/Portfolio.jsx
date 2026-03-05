@@ -31,7 +31,7 @@ const Portfolio = () => {
       <div className="container">
         <h1>Portfolio</h1>
         <h2 className="section-header"></h2>
-
+        <title>Portfolio</title>
         <div className="portfolio-grid-wrapper">
           <div className="projects-grid portfolio-fade-item">
             <GitHubCard

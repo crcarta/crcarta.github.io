@@ -7,11 +7,8 @@ const Navbar = ({ onToggleTheme, theme }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isOpen ? 'navbar--open' : ''}`}>
       <div className="navbar-container">
-        {/*<div className="navbar-logo">
-        <Link to="/">Christiano Carta</Link>
-        </div>*/}
         <div className="navbar-left">
           <div className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
             <span className="bar"></span>

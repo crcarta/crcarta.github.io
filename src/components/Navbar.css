@@ -1,106 +1,120 @@
 .navbar {
-    position: static;
-    top: 10px;     /* move down slightly */
-    left: 10px;    /* move slightly right */
-    width: calc(100vw - 10px); /* adjust width so it doesn’t overflow */
-    background-color: var(--bg-body);
-    color: var(--text-main);
-    padding: 1rem 0;
-    font-family: Arial, sans-serif;
-    margin: 0;
+  position: relative; /* anchors the theme button */
+  width: 100%;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  padding: 1rem 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+.navbar-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
 
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  gap: 1rem;
+}
+
+.navbar-item a {
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-item a:hover {
+  color: var(--text-muted);
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-main);
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+  /* Allow the container to wrap so the menu sits below the toggle row */
   .navbar-container {
-    width: 100vw; /* Full viewport width */
-    margin: 0;
-    padding: 0 1rem; /* Consistent padding */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
+    flex-wrap: wrap;
   }
 
-  .navbar-logo a {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .navbar-left {
-    display: flex;
-    align-items: center;
-  }
-
+  /* Menu is in normal document flow (no position:absolute)         */
+  /* Hidden via max-height:0 so it smoothly pushes content down     */
   .navbar-menu {
-    display: flex;
-    list-style: none;
-    margin: 0 0 0 1rem;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    gap: 0;
+    margin: 0;
     padding: 0;
-    gap: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
   }
 
-  .navbar-item a {
-    color: var(--text-main);
-    text-decoration: none;
-    transition: color 0.3s;
+  .navbar-menu.active {
+    max-height: 300px;
+    padding: 0.5rem 0 1rem 0;
   }
 
-  .navbar-item a:hover {
-    color: var(--text-muted);
+  .navbar-item {
+    padding: 0.6rem 0 0.6rem 3rem; /* left-indent aligns text clear of the hamburger */
+    text-align: left;
   }
 
   .navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+    display: flex;
   }
+}
 
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-main);
-    margin: 3px 0;
-    transition: 0.3s;
-  }
+.theme-toggle-button {
+  border: 1px solid var(--border-subtle);
+  background-color: transparent;
+  color: var(--text-main);
+  border-radius: 999px;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.75rem;
+  position: absolute;
+  right: 1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
 
-  @media screen and (max-width: 768px) {
-    .navbar-menu {
-      position: absolute;
-      left: -100%;
-      top: 60px;
-      flex-direction: column;
-      background-color: var(--bg-body);
-      width: 100vw; /* Full viewport width */
-      text-align: center;
-      transition: 0.3s;
-      padding: 2rem 0;
-      margin: 0;
-    }
-
-    .navbar-menu.active {
-      left: 0;
-    }
-
-    .navbar-toggle {
-      display: flex;
-    }
-  }
-
-  .theme-toggle-button {
-    border: 1px solid var(--border-subtle);
-    background-color: transparent;
-    color: var(--text-main);
-    border-radius: 999px;
-    padding: 0.3rem 0.4rem;  /* slightly taller, narrower */
-    font-size: 0.75rem;
-    margin-right: 100px; /* pull button ~100px away from right edge */
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .theme-toggle-button:hover {
-    background-color: var(--card-bg);
-    border-color: var(--border-subtle);
-  }
+.theme-toggle-button:hover {
+  background-color: var(--card-bg);
+  border-color: var(--border-subtle);
+}
